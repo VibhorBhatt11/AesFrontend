@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 
 const TRANS = [
 	{label: '270 - Eligibility', path: '/products/270'},
-	{label: '276 - Claim Status', path: '/products/276' },
+	{label: '276', path: '/products/276' },
 	// {label: '278', path: '/products/278' }
 ]
 

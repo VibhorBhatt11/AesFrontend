@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '@mui/material/Button';
 import Transactions from '../../components/Transactions'
 import CustomCard from '@/components/CustomCard'
-import { Box, Grid } from '@mui/material'
+import { Box, colors, Grid } from '@mui/material'
 
 const labels = [
 	{
@@ -28,6 +28,10 @@ const labels = [
 	},
 	{
 		label: 'Citus',
+		summary: "hsdkjfhdf jkdhfkjd jkshgfkj"
+	},
+	{
+		label: 'Chat with EDI',
 		summary: "hsdkjfhdf jkdhfkjd jkshgfkj"
 	},
   ]

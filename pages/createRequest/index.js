@@ -79,7 +79,11 @@ export default function() {
                             label="First DOS"
                             defaultValue=""
                             variant="standard"
-                            sx={{width: '100%'}}
+                            sx={{
+                                width: '100%',
+                                // padding: '5px 10px',
+                                // borderWidth: '1px'
+                            }}
                         />
                         <DatePicker> </DatePicker>
                     </Grid>
