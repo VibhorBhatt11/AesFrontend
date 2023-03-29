@@ -25,6 +25,16 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
+    "/createRequest": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/createRequest.js"
+    ],
+    "/executeSingleRequest": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/executeSingleRequest.js"
+    ],
     "/products": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",

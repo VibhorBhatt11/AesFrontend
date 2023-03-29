@@ -3,7 +3,7 @@ import {Box, TextField, Grid, Button} from '@mui/material';
 import Transactions from '../../components/Transactions'
 import { useRouter } from "next/router";
 import ButtonUnstyled from '@mui/base/ButtonUnstyled';
-import DatePicker from '@/components/DatePicker'
+import DatePicker from '../../components/DatePicker'
 import SubmitButton from '../../components/SubmitButton'
 
 

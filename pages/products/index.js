@@ -1,13 +1,13 @@
 import React from 'react';
 import Button from '@mui/material/Button';
 import Transactions from '../../components/Transactions'
-import CustomCard from '@/components/CustomCard'
+import CustomCard from '../../components/CustomCard'
 import { Box, colors, Grid } from '@mui/material'
 
 const labels = [
 	{
 	  label: 270,
-	  summary: "hsdkjfhdf jkdhfkjd jkshgfkj"
+	  summary: "Member Eligibility & Benefits"
 	},
 	{
 	  label: 276,
@@ -15,20 +15,20 @@ const labels = [
 	},
 	{
 	  label: 278,
-	  summary: "hsdkjfhdf jkdhfkjd jkshgfkj"
+	  summary: "Claims Enquiry"
 	},  
 	{
 	  label: 275,
-	  summary: "hsdkjfhdf jkdhfkjd jkshgfkj"
+	  summary: "EDI Attachments"
 	},
   
 	{
 		label: 'Splunk',
-		summary: "hsdkjfhdf jkdhfkjd jkshgfkj"
+		summary: "Monitoring"
 	},
 	{
 		label: 'Citus',
-		summary: "hsdkjfhdf jkdhfkjd jkshgfkj"
+		summary: "PostgreSql"
 	},
 	{
 		label: 'Chat with EDI',

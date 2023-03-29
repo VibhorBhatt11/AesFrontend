@@ -21,9 +21,9 @@
 // //   );
 // // }
 
-import React, { useState } from 'react';
+import {React, useState } from 'react';
 // import './App.css';
-import MaterialTable from MaterialTable;
+import MaterialTable from '@material-table/core';
 import XLSX from 'xlsx';
 
 const EXTENSIONS = ['xlsx', 'xls', 'csv'];
@@ -92,10 +92,10 @@ function App() {
 
   return (
     <div className="App">
-      <h1 align="center">React-App</h1>
-      <h4 align='center'>Import Data from Excel, CSV in Material Table</h4>
+      <h1 align="center" width='100%'>Bulk Automation</h1>
+      <h4 align='center'>Upload Data in Excel or CSV format</h4>
       <input type="file" onChange={importExcel} />
-      <MaterialTable title="Olympic Data" data={data} columns={colDefs} />
+      <MaterialTable title="Parallel-Prod" data={data} columns={colDefs} />
     </div>
   );
 }
