@@ -1,6 +1,10 @@
 import Head from 'next/head'
+import { Box, Typography, Grid, Button } from '@mui/material'
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import { useRouter } from 'next/router';
 
 export default function Home() {
+  const router = useRouter()
   return (
     <>
       <Head>
@@ -10,8 +14,24 @@ export default function Home() {
       </Head>
       <main>
         {/* <h1>Landing Page</h1> */}
-        <img alt="image" src="/AES_Home.jpg"  width="100%" height="100%" margin = '0' padding='0' style={{objectFit: 'cover'}} />        
+        <Grid container sx={{height: "calc(100vh - 70px)"}}>
+          <Grid item md={6}>
+            <Box sx={{p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', height: '100%'}}>
+              <Typography variant='h2' sx={{py: 2}}>EDI</Typography>
+              <Typography variant='subtitle1' sx={{py: 1}}>Electronic Data Interchange (EDI) is the electronic remedy to handling healthcare payment challenges.</Typography>
+              <Typography variant='subtitle2' sx={{py: 1}}>The use of EDI for healthcare can improve productivity by making data transmission faster, more efficient, and accurate. There is limited human intervention in the transmission which also reduces errors due to reduced manual data entry, illegible handwriting, and lost emails or faxes.</Typography>
+              <Button onClick={() => router.push("/products")} variant='contained' sx={{mt: 2}} size={"small"} endIcon={<ArrowRightAltIcon size={25} />}>Lets explore</Button>
+            </Box>
+          </Grid>
+          <Grid item md={6}>
+            <Box sx={{p: 4, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'flex-start', height: '100%'}}>
+              <img alt="image" src="/AES_Home.jpg" width="100%" height="auto" margin = '0' padding='0' />
+            </Box>
+          
+          </Grid>
+        </Grid>
       </main>
     </>
   )
 }
+// width="100%" height="100%" style={{objectFit: 'cover'}} 

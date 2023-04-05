@@ -7,6 +7,7 @@ import TextField from '@mui/material/TextField';
 import SubmitButton from '../../components/SubmitButton'
 import ClearButton from '../../components/ClearButton'
 import {Box, Grid, Button} from '@mui/material';
+import Layout from "../../components/Layout"
 
 const columns = [
 
@@ -117,51 +118,52 @@ export default function RowContextMenu() {
   };
 
   return (
-    
-    <div style={{ height: 400, width: '100%' }}>
-      <h1 > Execute Single Request</h1>
-      <Grid item xs={12} md={6} rowSpacing="2" columnSpacing="2">
-        <TextField required
-          id="filled basic"
-          size = "large"
-          label="Paste your X12 here"
-          defaultValue=""
-          variant="filled"                           
-          sx={{width: '100%'}} />
-        <SubmitButton></SubmitButton>
-        <ClearButton></ClearButton>
-      </Grid>    
-      <DataGrid
-        columns={columns}
-        rows={rows}
-        slotProps={{
-          row: {
-            onContextMenu: handleContextMenu,
-            style: { cursor: 'context-menu' },
-          },
-        }}
-      />
-      <Menu
-        open={contextMenu !== null}
-        onClose={handleClose}
-        anchorReference="anchorPosition"
-        anchorPosition={
-          contextMenu !== null
-            ? { top: contextMenu.mouseY, left: contextMenu.mouseX }
-            : undefined
-        }
-        slotProps={{
-          root: {
-            onContextMenu: (e) => {
-              e.preventDefault();
-              handleClose();
+    <Layout>
+      <div style={{ height: 400, width: '100%' }}>
+        <h1 > Execute Single Request</h1>
+        <Grid item xs={12} md={6} rowSpacing="2" columnSpacing="2">
+          <TextField required
+            id="filled basic"
+            size = "large"
+            label="Paste your X12 here"
+            defaultValue=""
+            variant="filled"                           
+            sx={{width: '100%'}} />
+          <SubmitButton></SubmitButton>
+          <ClearButton></ClearButton>
+        </Grid>    
+        <DataGrid
+          columns={columns}
+          rows={rows}
+          slotProps={{
+            row: {
+              onContextMenu: handleContextMenu,
+              style: { cursor: 'context-menu' },
             },
-          },
-        }}
-      >
-        <MenuItem onClick={convertToUppercase}>UPPERCASE</MenuItem>
-        <MenuItem onClick={convertToLowercase}>lowercase</MenuItem>
-      </Menu>
-    </div>
+          }}
+        />
+        <Menu
+          open={contextMenu !== null}
+          onClose={handleClose}
+          anchorReference="anchorPosition"
+          anchorPosition={
+            contextMenu !== null
+              ? { top: contextMenu.mouseY, left: contextMenu.mouseX }
+              : undefined
+          }
+          slotProps={{
+            root: {
+              onContextMenu: (e) => {
+                e.preventDefault();
+                handleClose();
+              },
+            },
+          }}
+        >
+          <MenuItem onClick={convertToUppercase}>UPPERCASE</MenuItem>
+          <MenuItem onClick={convertToLowercase}>lowercase</MenuItem>
+        </Menu>
+      </div>
+    </Layout>
   );
 }

@@ -15,7 +15,7 @@ import AdbIcon from '@mui/icons-material/Adb';
 import Link from '@mui/material/Link';
 
 const pages = [
-  {label: 'Products', path: "/products"}, {label: 'Backends', path: '/backends'}];
+  {label: 'Products', path: "/products"}, {label: 'Backends', path: '/backends'}, {label: 'DevOps', path: "/devOps"}];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 const BRAND = 'Absolute EDI Solutions'

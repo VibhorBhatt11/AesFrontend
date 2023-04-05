@@ -3,6 +3,7 @@ import Button from '@mui/material/Button';
 import Transactions from '../../components/Transactions'
 import CustomCard from '../../components/CustomCard'
 import { Box, colors, Grid } from '@mui/material'
+import Layout from "../../components/Layout"
 
 const labels = [
 	{
@@ -32,26 +33,24 @@ const labels = [
 	},
 	{
 		label: 'Chat with EDI',
-		summary: "hsdkjfhdf jkdhfkjd jkshgfkj"
+		summary: "ChatBot using ChatGPT"
 	},
   ]
 export default function() {
 	
 	return (
-		<>
-		  <main>
+		<Layout>
 			<Box sx={{mt: 5}}>
 			  <Grid container spacing={2}>
 				{
 				  labels.map(({label, summary}) => {
-					return <Grid item xs={12} md={3}>
+					return <Grid item xs={12} md={4}>
 					  <CustomCard label={label} summary={summary} /> 
 					</Grid>
 				  })
 				}
 			  </Grid>
 			</Box>			
-		  </main>
-		</>
+		</Layout>
 	  )
 }

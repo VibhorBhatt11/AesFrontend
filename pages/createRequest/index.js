@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import ButtonUnstyled from '@mui/base/ButtonUnstyled';
 import DatePicker from '../../components/DatePicker'
 import SubmitButton from '../../components/SubmitButton'
+import Layout from "../../components/Layout"
 
 
 
@@ -14,6 +15,7 @@ export default function() {
 	// const {trans} = router.query
 
   return (
+    <Layout>
 		<Box>           
 			<h1> Create 276 X12</h1>
 			
@@ -153,5 +155,6 @@ export default function() {
 				</Grid>
 			</Box>
 		</Box>
+        </Layout>
 	)
 }
